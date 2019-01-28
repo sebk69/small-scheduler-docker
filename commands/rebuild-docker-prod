@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker-compose --file "../docker-compose-prod.yml" --project-name small-scheduler up -d --build --remove-orphans
