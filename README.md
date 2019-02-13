@@ -42,6 +42,11 @@ Create first user
 $ ./console sebk:small-user:create-user [email] [nickname] [password]
 ```
 
+#### Run scheduler
+``` bash
+$ ./schedule
+```
+
 #### Run webapp to configure your server
 
 Finaly start development webapp
