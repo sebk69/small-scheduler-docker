@@ -46,6 +46,7 @@ $ ./console sebk:small-user:create-user [email] [nickname] [password]
 
 Finaly start development webapp
 ``` bash
+$ ./npm install
 $ ./ng serve --host 0.0.0.0
 ```
 
