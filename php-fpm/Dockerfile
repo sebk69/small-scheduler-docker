@@ -40,4 +40,10 @@ RUN usermod -a -G sudo smm
 RUN mkdir /home/smm
 RUN chown -R smm:smm /home
 RUN echo "dev\ndev" | passwd
+
+COPY start-small-scheduler /home/ssm/start-small-scheduler
+RUN chmod 755 /home/ssm/start-small-scheduler
+
 USER smm
+
+CMD sleep 10 && /home/ssm/start-small-scheduler && php-fpm

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/server/bin/console small-scheduler:scheduler &
+/server/bin/console small-scheduler:callback &
