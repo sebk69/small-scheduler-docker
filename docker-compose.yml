@@ -9,6 +9,8 @@ services:
       environment:
         - MYSQL_ROOT_PASSWORD=dev
         - TZ='Europe/Paris'
+      ports:
+        - 3306:3306
     mailer:
       image: mwader/postfix-relay:latest
       container_name: small-scheduler-mailer
