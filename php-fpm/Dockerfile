@@ -5,7 +5,9 @@ RUN echo "date.timezone = Europe/Paris" > /usr/local/etc/php/conf.d/timezone.ini
 
 # Install selected extensions and other stuff
 RUN docker-php-ext-install pdo pdo_mysql bcmath
+RUN sed -i "s|;*listen\s*=\s*127.0.0.1:9000|listen = 9000|g" /usr/local/etc/php-fpm.d/www.conf
 
+RUN echo "override"
 COPY php-ini-overrides.ini /usr/local/etc/php/conf.d/99-overrides.ini
 
 # Install sudo
@@ -35,7 +37,7 @@ RUN php -r "unlink('composer-setup.php');"
 
 # create user
 RUN groupadd smm
-RUN useradd -r -u 1000 -g smm smm
+RUN useradd -r -u 1001 -g smm smm
 RUN usermod -a -G sudo smm
 RUN mkdir /home/smm
 RUN chown -R smm:smm /home
