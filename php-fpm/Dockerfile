@@ -37,7 +37,7 @@ RUN php -r "unlink('composer-setup.php');"
 
 # create user
 RUN groupadd smm
-RUN useradd -r -u 1001 -g smm smm
+RUN useradd -r -u 1000 -g smm smm
 RUN usermod -a -G sudo smm
 RUN mkdir /home/smm
 RUN chown -R smm:smm /home

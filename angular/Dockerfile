@@ -8,7 +8,7 @@ RUN npm install -g @angular/cli
 RUN apt-get update && apt-get install sudo
 
 # parameter users
-RUN usermod -u 1001 node
+RUN usermod -u 1000 node
 RUN usermod -a -G sudo node
 RUN echo "dev\ndev" | passwd node
 
