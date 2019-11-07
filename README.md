@@ -40,6 +40,7 @@ $ ./console sebk:small-orm:layers-execute
 Create first user
 ``` bash
 $ ./console sebk:small-user:create-user [email] [nickname] [password]
+$ ./console sebk:small-user:add-role [nickname] ROLE_ADMIN
 ```
 
 #### Run scheduler
