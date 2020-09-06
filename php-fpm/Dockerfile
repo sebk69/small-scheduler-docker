@@ -30,6 +30,11 @@ RUN apt-get update \
     && apt-get -y install openssl \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
+# Install supervisor
+RUN apt-get update \
+    && apt-get -y install supervisor \
+    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+
 # install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/usr/bin --filename=composer
@@ -43,10 +48,4 @@ RUN mkdir /home/smm
 RUN chown -R smm:smm /home
 RUN echo "dev\ndev" | passwd
 
-# create start script
-COPY start-small-scheduler /home/ssm/start-small-scheduler
-RUN chmod 755 /home/ssm/start-small-scheduler
-
-USER smm
-
-CMD sleep 10 && /home/ssm/start-small-scheduler && php-fpm
+CMD sleep 10 && supervisord && supervisorctl start all && php-fpm

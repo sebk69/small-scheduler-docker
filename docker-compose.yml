@@ -47,6 +47,7 @@ services:
       working_dir: /server
       volumes:
         - ./server:/server
+        - ./php-fpm/small-scheduler-supervisor.conf:/etc/supervisor/conf.d/small-scheduler-supervisor.conf
     webapp:
       build: angular
       container_name: small-scheduler-webapp
