@@ -1,6 +1,6 @@
 [submodule "webapp"]
 	path = webapp
-	url = git@github.com:sebk69/small-scheduler-webapp.git
+	url = https://github.com/sebk69/small-scheduler-webapp.git
 [submodule "server"]
 	path = server
-	url = git@github.com:sebk69/small-scheduler.git
+	url = https://github.com/sebk69/small-scheduler.git
