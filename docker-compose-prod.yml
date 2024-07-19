@@ -1,6 +1,7 @@
 version: "2"
 services:
     mysql:
+      platform: linux/amd64
       restart: always
       image: mysql:5.6
       container_name: small-scheduler-db
@@ -11,6 +12,7 @@ services:
         - MYSQL_ROOT_PASSWORD=dev
         - TZ='Europe/Paris'
     mailer:
+      platform: linux/amd64
       restart: always
       image: mwader/postfix-relay:latest
       container_name: small-scheduler-mailer
