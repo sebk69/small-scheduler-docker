@@ -1,6 +1,6 @@
 FROM php:7.2-fpm
 
-COPY ./sources.list /etc/apt/source.list
+COPY ./sources.list /etc/apt/sources.list
 
 WORKDIR "/server"
 
