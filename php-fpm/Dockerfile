@@ -1,6 +1,4 @@
-FROM php:7.2-fpm
-
-COPY ./sources.list /etc/apt/sources.list
+FROM php:7.2-fpm-buster
 
 WORKDIR "/server"
 
