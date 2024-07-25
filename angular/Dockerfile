@@ -3,7 +3,6 @@ FROM node:10-buster
 # install angular
 RUN echo "install agular"
 RUN npm install -g @angular/cli@10.2.4
-RUN npm install -g @angular/cli
 
 # install sudo
 RUN apt-get update && apt-get install sudo

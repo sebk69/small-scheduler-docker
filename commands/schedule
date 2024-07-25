@@ -1,4 +1,4 @@
 #!/bin/bash
 
 ./console-no-interaction small-scheduler:callback &
-./console-no-interaction small-scheduler:schedule &
+./console-no-interaction small-scheduler:scheduler &
