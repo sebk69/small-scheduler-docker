@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker exec -it small-scheduler-webapp bash -c "cd /webapp && sudo -u node npm $1 $2 $3 $4 $5 $6 $7 $8 $9"
+docker exec -it small-scheduler-webapp bash -c "cd /webapp && npm $1 $2 $3 $4 $5 $6 $7 $8 $9"
 

@@ -2,15 +2,7 @@ FROM node:10
 
 # install angular
 RUN echo "install agular"
-RUN npm install -g @angular/cli
-
-# install sudo
-RUN apt-get update && apt-get install sudo
-
-# parameter users
-RUN usermod -u 1000 node
-RUN usermod -a -G sudo node
-RUN echo "dev\ndev" | passwd node
+RUN npm install -g @angular/cli@10.2.4
 
 # Build entrypoint
 COPY idle.sh /home/node/idle.sh
