@@ -34,7 +34,6 @@ services:
         - ./nginx-logs:/var/log/nginx
       ports:
         - "80:80"
-        - "8080:8080"
     message-broker:
       image: rabbitmq:3.7-management
       container_name: small-scheduler-message-broker
