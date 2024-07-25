@@ -1,5 +1,7 @@
 FROM node:10-buster
 
+RUN usermod -u 1001 node
+
 # install angular
 RUN echo "install agular"
 RUN npm install -g @angular/cli
