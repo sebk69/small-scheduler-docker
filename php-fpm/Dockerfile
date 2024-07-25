@@ -1,4 +1,5 @@
-FROM php:7.2-fpm
+FROM php:7.2-fpm-buster
+
 WORKDIR "/server"
 
 RUN echo "date.timezone = Europe/Paris" > /usr/local/etc/php/conf.d/timezone.ini

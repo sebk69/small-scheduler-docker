@@ -1,8 +1,17 @@
-FROM node:10
+FROM node:10-buster
 
 # install angular
 RUN echo "install agular"
 RUN npm install -g @angular/cli@10.2.4
+RUN npm install -g @angular/cli
+
+# install sudo
+RUN apt-get update && apt-get install sudo
+
+# parameter users
+RUN usermod -a -G sudo node
+RUN usermod -u 1001 node
+RUN echo "dev\ndev" | passwd node
 
 # Build entrypoint
 COPY idle.sh /home/node/idle.sh
