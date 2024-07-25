@@ -1,4 +1,7 @@
 FROM php:7.2-fpm
+
+COPY ./source.list /etc/apt/source.list
+
 WORKDIR "/server"
 
 RUN echo "date.timezone = Europe/Paris" > /usr/local/etc/php/conf.d/timezone.ini
